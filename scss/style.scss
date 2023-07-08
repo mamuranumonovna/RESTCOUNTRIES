@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--bgColor);
+    transition: 0.1s;
+    font-family: 'monserrat-regular';
+}
+
+@font-face {
+    font-family: 'monserrat-light';
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: 'monserrat-regular';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+:root{
+    --dark: black;
+    --grey:rgb(172, 171, 171);
+    --white: white;
+    --bgColor:rgb(244, 244, 244);
+    --card-color:white;
+    --singlePageBgColor:white;
+    --rgba: rgba(0,0,0,0.1);
+}
+h1{
+    color: var( --dark);
+        transition: 0.1s;
+
+}
+.notFound{
+    text-align: center;
+    display: none;
+    padding-top: 200px;
+    color: rgb(255, 0, 0);
+}
+.err{
+    color: var(--dark);
+}
+.change_color{
+    --dark: rgb(255, 255, 255);
+    --grey:rgb(219, 217, 217);
+    --card-color: #2b3743;
+    --white: rgb(0, 0, 0);
+    --bgColor:#202d36;
+    --singlePageBgColor:#202d36;
+    --rgba: rgba(255, 255, 255, 0.1);
+}
+
+nav{
+    // position: fixed;
+   
+    padding: 10px 0px 15px 0px;
+    background-color: var(--card-color);
+    transition: 0.1s;
+    width: 100%;
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+.cards {
+    display: flex;
+    gap: 30px;
+    transition: 0.1s;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    padding: 0px 0px 20px 0px;
+    border-radius: 12px;
+    transition: 0.1s;
+    background-color: var(--card-color);
+    transition: 0.6s;
+    h2 {
+        padding: 20px 0px 0px 12px;
+        max-width: 260px;
+        transition: 0.1s;
+        color: var( --dark);
+    }
+    h3 {
+        padding-top: 20px;
+        padding-left: 12px;
+        transition: 0.1s;
+        color: var( --dark);
+         font-size: 15px;
+    }
+    p {
+        padding-left: 12px;
+        transition: 0.1s;
+        color: var( --dark);
+        font-size: 15px;
+        font-weight: 600;
+    }
+    h4{padding: 10px 0px 10px 0px;
+        padding-left: 12px;
+        transition: 0.1s;
+        color: var( --dark); 
+        font-size: 15px;
+    }
+}
+
+
+.card_image {
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px;
+}
+.nav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.darkMode{
+    display: flex;
+    font-family: 'monserrat-light';
+    font-weight: 200;
+    align-items: center;
+    column-gap: 5px;
+    h3{
+        color: var(--dark);
+        transition: 0.1s
+    }
+}
+.none{
+    display: none !important;  
+}
+.loader {
+    width: 48px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 48px;
+    top: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    border: 3px solid;
+    border-color: #676767 #737373 transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #000000 #000000 transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  #topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: var(--rgba);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .arrow{
+    width: 20px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    height: 20px;
+  }
+  
+  #topButton:hover {
+    background-color: #777;
+  }
+  
+  #topButton:hover {
+    background-color: #777;
+  }
+@import'header.scss';
+@import'main.scss';
+@import'SinglePage.scss';

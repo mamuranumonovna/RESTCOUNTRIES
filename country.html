@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./scss/minifir.css">
+  <link rel="icon" href="./image/earth.svg">
+  <title>SINGLE COUNTRY</title>
+</head>
+<header>
+    <nav>
+        <div class="container">
+            <div class="nav">
+                <h1>Where in the world?</h1>
+               <div class="darkMode">
+                
+                <label class="switch"> <input type="checkbox" id="modeSwitch"> <span class="slider"></span> </label>
+                <h3 class="nav_dark"></h3>
+               </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    
+        <div class="container">
+            <span class="loader"></span>
+            <div id="countryDetails">
+                <button class="btn" onclick="goBack()">
+                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Arrow / Arrow_Left_LG">
+                        <path id="Vector" d="M3 12L8 17M3 12L8 7M3 12H21" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </svg>
+                    Back
+                </button>
+               
+                <div class="country_box">
+                    <div id="flag"></div>
+                    <div class="country_box-title">
+                        <h2 id="countryName"></h2>
+                        <div class="country_box-text gap">
+                            <div class="country_box-text1">
+                                
+                                <p id="nativeName"></p>
+                                <p id="population"></p>
+                                <p id="region"></p>
+                                <p id="subregion"></p>
+                                <p id="capital"></p>
+                            </div>
+                            
+                            <div class="country_box-text2">
+                                <p id="domain"></p>
+                                <p id="currency"></p>
+                                <p id="language"></p>
+                            </div>
+                         
+                        </div>
+                        
+                      
+                        <p class="text"></p>
+                            <div id="border">
+                            </div>
+                       
+                        
+                       
+                    </div>
+                   
+                    
+                </div>
+                
+              </div>
+              
+        </div>
+   
+   
+  
+    <script src="./js/country.js"></script>
+    </body>
+</html>

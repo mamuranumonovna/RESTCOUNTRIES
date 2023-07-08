@@ -1,0 +1,137 @@
+
+.btn{
+        position: relative;
+        margin: 20px 0px 65px 0px;
+        padding: 10px 40px 10px 55px;
+        border: none;
+        background-color: var(--card-color);
+        box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        color: var(--grey);
+        transition: 0.1s;
+}
+#countryDetails{
+  
+        svg{
+            position: absolute;
+            left: 25px;
+            top: 7px;
+            width: 22px;
+            height: 22px;
+        }
+    
+}
+
+#border{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    button{
+        padding: 10px 50px;
+        border: none;
+        background-color: var(--card-color);
+        box-shadow: 0px 5px 10px -6px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        color: var(--dark);
+        transition: 0.1s;
+    }
+}
+
+#flag{
+    img{
+        width: 600px;
+        height: 400px;
+    }
+}
+.country_box{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    .country_box-title{
+        h2{
+            font-size: 35px;
+        margin-bottom: 30px;
+        color: var(--dark);
+        transition: 0.1s;
+        }
+        p{
+            
+            font-weight: 600;
+            padding-top: 60px;
+            color: var(--dark);
+            transition: 0.1s;
+        }
+    }
+    .country_box-text{
+        display: flex;
+        gap: 80px;
+        p{
+            
+            font-weight: 600;
+            padding: 8px 0px 10px 0px;
+            color: var(--dark);
+            transition: 0.1s;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .country_box{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .country_box-title{
+        padding-bottom: 20px;
+    }
+}
+@media (max-width:600px) {
+    #flag{
+        img{
+            width: 100%;
+        }
+    }
+    .loader{
+        left: 40% !important;
+    }
+
+    
+}
+@media (max-width:520px){
+    
+}
+@media (max-width:455px) {
+#border::-webkit-scrollbar{
+width: 0;
+}
+
+
+    #border{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        
+    }
+        #countryName{
+            font-size: 30px;
+            padding-top: 15px;
+        }
+        .country_box-text{
+            flex-direction: column;
+            gap: 0 !important;
+        }
+        .nav_dark{
+            display: none;
+        }
+        #flag{
+            img{
+                height: auto;
+            }
+        }
+        .country_box{
+            display: block;
+        }
+        .country_box-title{
+            padding-bottom: 20px;
+        }
+}
